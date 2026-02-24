@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Darshan Poojary</title>
+    <title>Darshan Poojary - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,9 +57,9 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -69,7 +69,7 @@
             
             <div class="profile-photo-container">
                 <div class="profile-photo">
-                    <img src="my-photo.svg.jpeg" alt="Darshan Poojary" id="profile-img">
+                    <img src="your-photo.svg" alt="Darshan Poojary" id="profile-img">
                     <div class="photo-ring"></div>
                     <div class="photo-ring-2"></div>
                 </div>
@@ -78,6 +78,17 @@
             <h1>Darshan Poojary</h1>
             <p>B.Tech in Robotics & Artificial Intelligence</p>
             <p class="tagline">Aspiring Robotics Engineer | AI Enthusiast</p>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" id="scrollIndicator">
+                <div class="scroll-text">Scroll Down</div>
+                <div class="scroll-arrow"></div>
+                <div class="scroll-chevron">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
         </header>
 
     <!-- About -->
@@ -144,6 +155,11 @@
            <li>Calculated individual wheel velocities using robot kinematics equations and transmitted motion commands wirelessly to control robot movement based on detected marker positions.</li>
         </ul>
 
+        <h3>Portfolio Website</h3>
+        <p>
+            Developed a responsive academic portfolio website using HTML and CSS
+            to present technical skills and academic projects.
+        </p>
     </section>
 
     <!-- Skills -->
@@ -206,7 +222,7 @@
     <!-- Contact -->
     <section id="contact">
         <h2>Contact Details</h2>
-        <p>Email: <a href="mailto:darshanpoojary909@gmail.com">darshanpoojary909@gmail.com</a></p>
+        <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff9b9e8d8c979e918f9090959e8d86c6cfc6bf98929e9693d19c9092">[email&#160;protected]</a></p>
         <p>Phone No: 9535518909</p>
         <p>Address: Opposite to Sahyadri Engineering College, Adyar, Mangalore - 575007</p>
         <p>GitHub: github.com/yourusername</p>
@@ -219,7 +235,7 @@
     
     </div> <!-- End Portfolio Content -->
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function enterPortfolio() {
     const welcomeScreen = document.getElementById('welcome-screen');
     const portfolioContent = document.getElementById('portfolio-content');
@@ -270,21 +286,31 @@ window.addEventListener('scroll', () => {
 </script>
 
 <script>
+// Scroll Indicator Functionality
+const scrollIndicator = document.getElementById('scrollIndicator');
+
+// Hide indicator when user scrolls
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    scrollIndicator.classList.add('hidden');
+  } else {
+    scrollIndicator.classList.remove('hidden');
+  }
+});
+
+// Smooth scroll to content when clicked
+scrollIndicator.addEventListener('click', () => {
+  const aboutSection = document.getElementById('about');
+  aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+
+<script>
 const navLinks = document.querySelectorAll('nav a');
 
 window.addEventListener('scroll', () => {
   navLinks.forEach(link => {
     const section = document.querySelector(link.getAttribute('href'));
     if (
-      section.offsetTop <= window.scrollY + 120 &&
-      section.offsetTop + section.offsetHeight > window.scrollY
-    ) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    }
-  });
-});
-</script>
-
-</body>
-</html>
+      section.offsetTop
