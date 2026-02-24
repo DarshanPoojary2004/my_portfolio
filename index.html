@@ -78,17 +78,6 @@
             <h1>Darshan Poojary</h1>
             <p>B.Tech in Robotics & Artificial Intelligence</p>
             <p class="tagline">Aspiring Robotics Engineer | AI Enthusiast</p>
-            
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator" id="scrollIndicator">
-                <div class="scroll-text">Scroll Down</div>
-                <div class="scroll-arrow"></div>
-                <div class="scroll-chevron">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </div>
-            </div>
         </header>
 
     <!-- About -->
@@ -282,27 +271,6 @@ window.addEventListener('scroll', () => {
       section.classList.add('show');
     }
   });
-});
-</script>
-
-<script>
-// Scroll Indicator Functionality
-const scrollIndicator = document.getElementById('scrollIndicator');
-
-// Hide indicator when user scrolls
-let scrollTimeout;
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    scrollIndicator.classList.add('hidden');
-  } else {
-    scrollIndicator.classList.remove('hidden');
-  }
-});
-
-// Smooth scroll to content when clicked
-scrollIndicator.addEventListener('click', () => {
-  const aboutSection = document.getElementById('about');
-  aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 </script>
 
