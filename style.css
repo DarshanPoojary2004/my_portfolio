@@ -943,25 +943,6 @@ footer::before {
     50% { opacity: 1; }
 }
 
-/* Mobile friendly */
-@media (max-width: 600px) {
-    nav a {
-        display: inline-block;
-        margin: 5px;
-        padding: 6px 15px;
-        font-size: 0.9em;
-    }
-    
-    header h1 {
-        font-size: 2em;
-    }
-    
-    section {
-        margin: 20px 10px;
-        padding: 20px;
-    }
-}
-
 /* Header tagline */
 .tagline {
     opacity: 0.95;
@@ -975,4 +956,321 @@ footer::before {
 /* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
+}
+
+/* =========================
+   RESPONSIVE DESIGN - ALL DEVICES
+========================= */
+
+/* Large Desktops (1920px and above) */
+@media screen and (min-width: 1920px) {
+    section {
+        max-width: 1200px;
+    }
+    
+    header h1 {
+        font-size: 3.5em;
+    }
+    
+    section h2 {
+        font-size: 2.5em;
+    }
+}
+
+/* Standard Laptops & Desktops (1024px - 1919px) */
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+    section {
+        max-width: 900px;
+    }
+}
+
+/* Tablets (Landscape) - 768px to 1023px */
+@media screen and (max-width: 1023px) {
+    /* Navigation */
+    nav {
+        padding: 15px 10px;
+    }
+    
+    nav a {
+        margin: 5px 8px;
+        padding: 10px 18px;
+        font-size: 0.95em;
+    }
+    
+    /* Header */
+    header {
+        padding: 60px 30px;
+    }
+    
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* Sections */
+    section {
+        margin: 30px 20px;
+        padding: 30px;
+        max-width: 90%;
+    }
+    
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+/* Tablets (Portrait) & Large Phones - 481px to 767px */
+@media screen and (max-width: 767px) {
+    /* Navigation - Stack or scroll */
+    nav {
+        padding: 12px 5px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    
+    /* Header */
+    header {
+        padding: 50px 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    .tagline {
+        font-size: 1em;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .photo-ring {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+    
+    .photo-ring-2 {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+    }
+    
+    /* Back button */
+    .back-to-welcome {
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        left: 15px;
+    }
+    
+    /* Sections */
+    section {
+        margin: 20px 15px;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+    
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    section p {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+    
+    ul li {
+        padding: 8px 0 8px 30px;
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile Phones - 320px to 480px */
+@media screen and (max-width: 480px) {
+    /* Welcome Screen */
+    .welcome-title {
+        font-size: 2.5em;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1.2em;
+    }
+    
+    .enter-button {
+        padding: 14px 35px;
+        font-size: 1em;
+    }
+    
+    /* Navigation - Compact */
+    nav {
+        padding: 10px 5px;
+    }
+    
+    nav a {
+        margin: 4px;
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    
+    /* Header */
+    header {
+        padding: 40px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    header p {
+        font-size: 0.95em;
+    }
+    
+    .tagline {
+        font-size: 0.9em;
+    }
+    
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+    }
+    
+    /* Back button */
+    .back-to-welcome {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    /* Sections */
+    section {
+        margin: 15px 10px;
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    section p {
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+    
+    ul li {
+        padding: 7px 0 7px 25px;
+        font-size: 0.9em;
+    }
+    
+    ul li::before {
+        font-size: 0.9em;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Extra Small Devices - 320px and below */
+@media screen and (max-width: 320px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .profile-photo {
+        width: 110px;
+        height: 110px;
+    }
+    
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+    
+    section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Landscape Mode - All Devices */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    header {
+        padding: 30px 20px;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    nav a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .back-to-welcome {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    nav a:hover {
+        transform: none;
+    }
+    
+    section:hover {
+        transform: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .welcome-screen,
+    .back-to-welcome,
+    nav {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
 }
