@@ -190,6 +190,19 @@
     animation: slideInDown 1s ease 0.3s both;
 }
 
+@media screen and (max-width: 768px) {
+    .welcome-title {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-title {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+}
+
 .name-title {
     font-size: 4.5em;
     margin: 20px 0;
@@ -201,6 +214,21 @@
     -webkit-text-fill-color: transparent;
     animation: slideInDown 1s ease 0.5s both, shimmer 3s ease infinite;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .name-title {
+        font-size: 3em;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name-title {
+        font-size: 1.8em;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
 }
 
 @keyframes shimmer {
@@ -231,11 +259,40 @@
     animation: slideInDown 1s ease 0.7s both;
 }
 
+@media screen and (max-width: 768px) {
+    .welcome-subtitle {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-subtitle {
+        font-size: 0.85em;
+        margin: 10px 0;
+        padding: 0 15px;
+    }
+}
+
 .welcome-description {
     margin: 30px 0;
     font-size: 1.1em;
     opacity: 0.9;
     animation: slideInDown 1s ease 0.9s both;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-description {
+        font-size: 1em;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-description {
+        font-size: 0.9em;
+        margin: 15px 10px;
+    }
 }
 
 /* Enter Button */
@@ -287,6 +344,25 @@
 
 .enter-btn:hover .arrow-icon {
     transform: translateX(5px);
+}
+
+/* Mobile responsive for enter button */
+@media screen and (max-width: 768px) {
+    .enter-btn {
+        margin-top: 30px;
+        padding: 15px 40px;
+        font-size: 1.1em;
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .enter-btn {
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1em;
+        gap: 10px;
+    }
 }
 
 .scroll-indicator {
@@ -1075,11 +1151,11 @@ html {
         bottom: -20px;
     }
     
-    /* Back button */
+    /* Back button - position below nav on mobile */
     .back-to-welcome {
-        width: 45px;
-        height: 45px;
-        top: 15px;
+        width: 50px;
+        height: 50px;
+        top: 65px;
         left: 15px;
     }
     
@@ -1109,16 +1185,30 @@ html {
 @media screen and (max-width: 480px) {
     /* Welcome Screen */
     .welcome-title {
-        font-size: 2.5em;
+        font-size: 2em;
+        padding: 0 15px;
     }
     
     .welcome-subtitle {
-        font-size: 1.2em;
+        font-size: 1em;
+        padding: 0 20px;
     }
     
     .enter-button {
-        padding: 14px 35px;
-        font-size: 1em;
+        padding: 12px 30px;
+        font-size: 0.95em;
+    }
+    
+    /* Welcome screen name - reduce size */
+    .welcome-content h1 {
+        font-size: 2.2em !important;
+        line-height: 1.2;
+        margin: 15px 0;
+    }
+    
+    .welcome-content p {
+        font-size: 1em !important;
+        margin: 10px 0;
     }
     
     /* Navigation - Compact */
@@ -1154,12 +1244,13 @@ html {
         height: 130px;
     }
     
-    /* Back button */
+    /* Back button - move below navigation */
     .back-to-welcome {
-        width: 40px;
-        height: 40px;
-        top: 12px;
-        left: 12px;
+        width: 50px;
+        height: 50px;
+        top: 70px;
+        left: 10px;
+        z-index: 999;
     }
     
     /* Sections */
