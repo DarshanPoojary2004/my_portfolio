@@ -186,6 +186,18 @@ section p {
     color: #d1d5db;
 }
 
+/* Contact Links */
+section a {
+    color: #a78bfa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #6366f1;
+    text-decoration: underline;
+}
+
 /* Lists */
 ul {
     list-style: none;
